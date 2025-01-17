@@ -6,21 +6,17 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 w-full bg-white bg-opacity-80 flex items-center justify-between p-4 z-50 shadow-md">
       {/* Logo and Name */}
       <div className="flex items-center space-x-3">
-        <img src="./200x400.png" alt="Logo" className="h-8 w-8" />
-        <span className="text-black text-xl font-semibold">Amerind Nation</span>
+        <NavLink to="/">
+          <img
+            src="./Logo.png"
+            alt="Logo"
+              className="h-12 w-32 shadow-lg hover:shadow-xl transition-shadow duration-300"
+
+          />
+        </NavLink>
       </div>
       {/* Navigation Links */}
       <div className="flex space-x-6">
-        <NavLink
-          to="/home"
-          className={({ isActive }) =>
-            `hover:underline ${
-              isActive ? "text-green-500 font-bold" : "text-black"
-            }`
-          }
-        >
-          Home
-        </NavLink>
         <NavLink
           to="/about"
           className={({ isActive }) =>
