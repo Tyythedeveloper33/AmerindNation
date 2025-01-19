@@ -6,6 +6,9 @@ import HomeHeroSection from '../HeroSection/HomeHeroSection';
 import AboutHeroSection from '../HeroSection/AboutHeroSection';
 import HomeCardSection from '../components/CardSection/HomeCardSection';
 import AboutCardSection from '../components/CardSection/AboutCardSection';
+import PortfolioHeroSection from '../HeroSection/PortfolioHeroSection';
+import PartnersHeroSection from '../HeroSection/PartnersHeroSection';
+import PortfolioCardSection from '../components/CardSection/PortfioCardSection';
 export const router = createBrowserRouter([
   {
     element: <Layout />,
@@ -31,12 +34,17 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path: "signup",
-        element: <SignupFormPage />,
+        path: "partners",
+
+        element:(<div className="pt-20"><PortfolioHeroSection/></div>) ,
       },
       {
-        path: "login",
-        element: <LoginFormPage />,
+        path: "portfolio",
+        element: (<div className="pt-20"><PartnersHeroSection /><PortfolioCardSection/></div>),
+      },
+      {
+        path: "services",
+        element: (<div className="pt-20"><PartnersHeroSection /></div>),
       },
     ],
   },

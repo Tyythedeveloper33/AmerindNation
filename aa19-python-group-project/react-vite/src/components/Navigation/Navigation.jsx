@@ -38,7 +38,7 @@ const Navigation = () => {
           Partners
         </NavLink>
         <NavLink
-          to="/projects"
+          to="/portfolio"
           className={({ isActive }) =>
             `hover:underline ${
               isActive ? "text-green-500 font-bold" : "text-black"
@@ -46,6 +46,16 @@ const Navigation = () => {
           }
         >
           Projects
+        </NavLink>
+        <NavLink
+          to="/services"
+          className={({ isActive }) =>
+            `hover:underline ${
+              isActive ? "text-green-500 font-bold" : "text-black"
+            }`
+          }
+        >
+          Services
         </NavLink>
       </div>
     </nav>

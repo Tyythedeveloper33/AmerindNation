@@ -81,7 +81,7 @@ const AboutCardSection = () => {
               {/* Team Member 1 */}
               <div className="text-center">
                 <img
-                  src="https://via.placeholder.com/150"
+                  src="./jenni.png"
                   alt="Jenni Schlosberg"
                   className="mx-auto rounded-full mb-4"
                 />
@@ -92,7 +92,7 @@ const AboutCardSection = () => {
               {/* Team Member 2 */}
               <div className="text-center">
                 <img
-                  src="https://via.placeholder.com/150"
+                  src="./pace.jpg"
                   alt="Pace Ellsworth"
                   className="mx-auto rounded-full mb-4"
                 />
