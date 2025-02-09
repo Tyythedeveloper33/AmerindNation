@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const ServicesCardSection = () => {
   const [expandedCard, setExpandedCard] = useState(null);

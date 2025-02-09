@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import ProfileButton from "./ProfileButton";
+// import ProfileButton from "./ProfileButton";
 import "../../index.css";
 
 const Navigation = () => {

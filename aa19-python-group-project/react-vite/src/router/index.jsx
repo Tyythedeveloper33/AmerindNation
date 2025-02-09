@@ -1,12 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
-import LoginFormPage from '../components/LoginFormPage';
-import SignupFormPage from '../components/SignupFormPage';
+// import LoginFormPage from '../components/LoginFormPage';
+// import SignupFormPage from '../components/SignupFormPage';
 import Layout from './Layout';
 import HomeHeroSection from '../HeroSection/HomeHeroSection';
 import AboutHeroSection from '../HeroSection/AboutHeroSection';
 import HomeCardSection from '../components/CardSection/HomeCardSection';
 import AboutCardSection from '../components/CardSection/AboutCardSection';
-import PortfolioHeroSection from '../HeroSection/PortfolioHeroSection';
+// import PortfolioHeroSection from '../HeroSection/PortfolioHeroSection';
 import PartnersHeroSection from '../HeroSection/PartnersHeroSection';
 import PortfolioCardSection from '../components/CardSection/PortfioCardSection';
 import ServicesCardSection from '../components/CardSection/ServicesCardSection';
