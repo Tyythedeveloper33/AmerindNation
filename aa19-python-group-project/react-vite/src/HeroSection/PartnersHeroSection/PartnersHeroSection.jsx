@@ -22,7 +22,7 @@ export default function PartnersHeroSection() {
                         href="#eligibility"
                         className="bg-[#2F6368] text-white px-6 py-3 rounded-full text-lg font-semibold shadow-md hover:bg-[#264F51] transition"
                     >
-                        Schedule Your Eligibility Interview
+                       Become a Partner
                     </a>
                 </div>
             </div>

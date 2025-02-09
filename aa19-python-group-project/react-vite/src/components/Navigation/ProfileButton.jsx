@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { FaUserCircle } from 'react-icons/fa';
+import { FaUserCircle } from "react-icons/fa";
 import { thunkLogout } from "../../redux/session";
 import OpenModalMenuItem from "./OpenModalMenuItem";
 import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignupFormModal";
+import "./Profilebutton.css";
+import { NavLink } from "react-router-dom";
 
 function ProfileButton() {
   const dispatch = useDispatch();
@@ -13,7 +15,7 @@ function ProfileButton() {
   const ulRef = useRef();
 
   const toggleMenu = (e) => {
-    e.stopPropagation(); // Keep from bubbling up to document and triggering closeMenu
+    e.stopPropagation(); // Prevent bubbling up to document and triggering closeMenu
     setShowMenu(!showMenu);
   };
 
@@ -40,18 +42,21 @@ function ProfileButton() {
   };
 
   return (
-    <>
-      <button onClick={toggleMenu}>
-        <FaUserCircle />
+    <div className="profile-button-container">
+      <button onClick={toggleMenu} className="profile-icon">
+        <FaUserCircle size={28} />
       </button>
       {showMenu && (
-        <ul className={"profile-dropdown"} ref={ulRef}>
+        <ul className="profile-dropdown detail-container" ref={ulRef}>
           {user ? (
             <>
-              <li>{user.username}</li>
-              <li>{user.email}</li>
+              <li className="profile-item">{user.username}</li>
+              <li className="profile-item">{user.email}</li>
+             <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
               <li>
-                <button onClick={logout}>Log Out</button>
+                <button onClick={logout} className="logout-button">
+                  Log Out
+                </button>
               </li>
             </>
           ) : (
@@ -66,11 +71,12 @@ function ProfileButton() {
                 onItemClick={closeMenu}
                 modalComponent={<SignupFormModal />}
               />
+
             </>
           )}
         </ul>
       )}
-    </>
+    </div>
   );
 }
 

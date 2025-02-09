@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
 const HomeCardSection = () => {
@@ -5,68 +6,63 @@ const HomeCardSection = () => {
     {
       title: "About Us",
       description: "Learn more about our mission and vision.",
-      gradient: "bg-gradient-to-br from-[#55926F] to-[#467F5D]", // Green gradient
+      gradient: "bg-gradient-to-br from-[#55926F] to-[#467F5D]",
       icon: "⚡",
-      link: "/about", // Link for "About Us" card
+      link: "/about",
     },
     {
       title: "Our Partners",
       description: "Collaborating with the best in the industry.",
-      gradient: "bg-gradient-to-br from-[#2F6368] to-[#264F51]", // Teal-blue gradient
+      gradient: "bg-gradient-to-br from-[#2F6368] to-[#264F51]",
       icon: "🤝",
-      link: "/partners", // Link for "Our Partners" card
+      link: "/partners",
     },
     {
       title: "Our Portfolio",
       description: "Explore innovative solutions for energy.",
-      gradient: "bg-gradient-to-br from-[#33A9B5] to-[#24959E]", // Cyan-blue gradient
+      gradient: "bg-gradient-to-br from-[#33A9B5] to-[#24959E]",
       icon: "🔋",
-      link: "/portfolio", // Link for "Our Portfolio" card
+      link: "/portfolio",
     },
     {
       title: "Our Services",
       description: "Your journey to sustainability starts here.",
-      gradient: "bg-gradient-to-br from-[#08FEB3] to-[#0FC99B]", // Aqua gradient
+      gradient: "bg-gradient-to-br from-[#08FEB3] to-[#0FC99B]",
       icon: "🌞",
-      link: "/services", // Link for "Our Solutions" card
+      link: "/services",
     },
   ];
 
   return (
-    <div className="w-full bg-gray-50 py-20">
-      {/* Container */}
+    <div className="w-full bg-gray-50 py-4"> {/* Reduced py-6 to py-4 */}
       <div className="max-w-7xl mx-auto flex flex-wrap gap-6 justify-center">
         {cards.map((card, index) => (
-          <div
+          <motion.div
             key={index}
-            className={`relative w-[320px] lg:w-[300px] xl:w-[280px] ${card.gradient} rounded-xl p-6 shadow-2xl`} // Increased width
+            className={`relative w-[320px] lg:w-[300px] xl:w-[280px] ${card.gradient} rounded-xl p-6 shadow-2xl`}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            {/* Top Section: Icon, Title, and Plus Icon */}
-            <div className="flex items-center justify-between mb-4"> {/* Adjusted margin-bottom */}
-              {/* Icon on the Left */}
+            <div className="flex items-center justify-between mb-4">
               <div className="bg-white bg-opacity-25 rounded-full p-2">
                 <span className="text-3xl text-white">{card.icon}</span>
               </div>
-
-              {/* Title in the Center */}
-              <h3 className={`text-${card.title === "About Us" ? "lg" : "md"} font-bold text-white`}>
-                {card.title}
-              </h3>
-
-              {/* Plus Sign on the Right */}
+              <h3 className="text-lg font-bold text-white">{card.title}</h3>
               <NavLink
                 to={card.link}
                 className="bg-white bg-opacity-25 rounded-full p-2 focus:outline-none"
               >
-                <span className="text-white text-2xl font-bold">+</span>
+                {/* Arrow Icon Instead of Plus Sign */}
+                <span className="text-white text-2xl font-bold">&#8594;</span> {/* Right Arrow */}
               </NavLink>
             </div>
-
-            {/* Description at the Bottom */}
             <p className="text-white text-opacity-90 text-sm leading-relaxed">
               {card.description}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
@@ -74,3 +70,4 @@ const HomeCardSection = () => {
 };
 
 export default HomeCardSection;
+
