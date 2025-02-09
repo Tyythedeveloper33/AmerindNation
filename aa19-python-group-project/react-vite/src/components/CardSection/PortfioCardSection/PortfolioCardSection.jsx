@@ -15,7 +15,7 @@ const PortfolioCardSection = () => {
       details: (
         <div className="bg-gray-50 p-6 rounded-b-lg shadow-md border-t-4 border-[#467F5D]">
           <p className="text-xl font-semibold text-gray-800">
-            "Innovative solutions currently in development."
+            &quot;Innovative solutions currently in development.&quot;
           </p>
           <ul className="mt-4 text-gray-700 leading-relaxed list-disc pl-6">
             <li>
@@ -69,58 +69,6 @@ const PortfolioCardSection = () => {
                 to schedule an eligibility consultation.
               </p>
             </li>
-            <li>
-              <strong>REAP Rural Energy</strong>
-              <br />
-              <a
-                href="https://www.rd.usda.gov/programs-services/energy-programs/rural-energy-america-program-renewable-energy-systems-energy-efficiency-improvement-guaranteed-loans"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                Visit the website
-              </a>
-              <p className="mt-2">
-                The program provides guaranteed loan financing and grant funding to agricultural producers and rural small businesses for renewable energy systems or to make energy efficiency improvements. Agricultural producers may also apply for new energy efficient equipment and new system loans for agricultural production and processing.
-              </p>
-              <p className="mt-2">
-                Are you a rural or tribal business?{" "}
-                <a
-                  href="#"
-                  className="text-blue-600 hover:underline"
-                  onClick={() => alert("Schedule Eligibility pop-up")}
-                >
-                  Schedule a time to meet with us
-                </a>
-                .
-              </p>
-            </li>
-            <li>
-              <strong>State/Tribal Grid Resilience</strong>
-              <br />
-              <a
-                href="https://www.energy.gov/gdo/grid-resilience-statetribal-formula-grants-program"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                Visit the website
-              </a>
-              <p className="mt-2">
-                Authorized by the Infrastructure Investment and Jobs Act, managed through the Grid Deployment Office (GDO), and administered by the National Energy Technology Laboratory (NETL), the Grid Resilience State and Tribal Formula Grants program is designed to strengthen and modernize America’s power grid against wildfires, extreme weather, and other natural disasters.
-              </p>
-              <p className="mt-2">
-                If you represent a Tribe or intertribal organization,{" "}
-                <a
-                  href="#"
-                  className="text-blue-600 hover:underline"
-                  onClick={() => alert("Schedule Eligibility pop-up")}
-                >
-                  contact us
-                </a>{" "}
-                to schedule an eligibility consultation.
-              </p>
-            </li>
           </ul>
         </div>
       ),
@@ -132,7 +80,7 @@ const PortfolioCardSection = () => {
       details: (
         <div className="bg-gray-50 p-6 rounded-b-lg shadow-md border-t-4 border-[#264F51]">
           <p className="text-xl font-semibold text-gray-800">
-            "A portfolio of impactful solutions."
+            &quot;A portfolio of impactful solutions.&quot;
           </p>
           <ul className="mt-4 text-gray-700 leading-relaxed list-disc pl-6">
             <li>
@@ -165,36 +113,6 @@ const PortfolioCardSection = () => {
                 Assisted MPTA in creating a business plan and website, trained dozens of people on requirements for opening truck driver training schools, and consulted with a national organization to help thousands expand their presence in rural food markets.
               </p>
             </li>
-            <li>
-              <strong>Tribal Housing (HUD)</strong>
-              <br />
-              <a
-                href="https://www.hud.gov/program_offices/public_indian_housing/ih/grants/ihbg_cgp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                Visit the website
-              </a>
-              <p className="mt-2">
-                In just 10 days, developed a plan for an Arizona Tribe's $6 million HUD grant application to rebuild 36 homes for families displaced by a devastating wildfire. Worked with 20 stakeholders to assess needs, prioritize affected sites, and develop comprehensive budgets.
-              </p>
-            </li>
-            <li>
-              <strong>TBCP (Department of Commerce - BroadbandUSA)</strong>
-              <br />
-              <a
-                href="https://broadbandusa.ntia.doc.gov/funding-programs/tribal-broadband-connectivity"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                Visit the website
-              </a>
-              <p className="mt-2">
-                Assisted 10 Oklahoma Tribes in drafting three Department of Commerce applications for the National Telecommunications and Information Administration (NTIA) Tribal Broadband Connectivity Program (TBCP) Round 2. The applications, totaling over $110 million, aimed to advance broadband adoption and infrastructure, including language and cultural preservation programs and sustainable workforce initiatives for data sovereignty.
-              </p>
-            </li>
           </ul>
         </div>
       ),
@@ -202,38 +120,17 @@ const PortfolioCardSection = () => {
   ];
 
   return (
-    <div className="w-full bg-gray-50 pt-10 pb-20">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 justify-center items-start">
+    <div className="w-full bg-gray-50 pt-10 pb-10">
+      <div className="max-w-6xl mx-auto px-4">
         {cards.map((card, index) => (
-          <div key={index} className="w-full lg:w-[450px] flex flex-col gap-4">
-            {/* Card Section */}
+          <div key={index} className="mb-6">
             <div
-              className={`relative ${
-                expandedCard !== null && expandedCard !== index
-                  ? "bg-gray-200"
-                  : card.gradient
-              } rounded-t-xl p-6 shadow-lg flex flex-col`}
+              className={`cursor-pointer p-6 rounded-lg shadow-md text-white flex items-center justify-between ${card.gradient}`}
+              onClick={() => handleToggle(index)}
             >
-              {/* Icon in the Top-Left */}
-              <div className="absolute top-4 left-4 bg-white bg-opacity-25 rounded-full p-2">
-                <span className="text-3xl text-white">{card.icon}</span>
-              </div>
-
-              {/* Title Centered */}
-              <h3 className="text-2xl font-bold text-white text-center">
-                {card.title}
-              </h3>
-
-              {/* Toggle Button */}
-              <button
-                onClick={() => handleToggle(index)}
-                className="absolute top-4 right-4 bg-transparent text-white text-lg"
-              >
-                {expandedCard === index ? "⬆️" : "⬇️"}
-              </button>
+              <span className="text-2xl font-semibold">{card.title}</span>
+              <span className="text-3xl">{card.icon}</span>
             </div>
-
-            {/* Expandable Details */}
             {expandedCard === index && card.details}
           </div>
         ))}
