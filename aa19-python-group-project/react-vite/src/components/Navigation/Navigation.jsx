@@ -18,7 +18,7 @@ const Navigation = () => {
           <img
             src="./Logo.png"
             alt="Logo"
-            className="h-12 w-32 transition-shadow duration-300"
+            className="h-12 transition-shadow duration-300"
           />
         </NavLink>
       </div>

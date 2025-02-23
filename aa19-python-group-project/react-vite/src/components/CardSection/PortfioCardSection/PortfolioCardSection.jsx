@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const PortfolioCardSection = () => {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -12,10 +13,16 @@ const PortfolioCardSection = () => {
       title: "Current Projects",
       gradient: "bg-gradient-to-br from-[#55926F] to-[#467F5D]", // Green gradient
       icon: "🚀",
+      borderColor: "border-[#467F5D]",
       details: (
-        <div className="bg-gray-50 p-6 rounded-b-lg shadow-md border-t-4 border-[#467F5D]">
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          className="bg-gray-50 p-6 rounded-b-lg shadow-md border-t-4 border-[#467F5D]"
+        >
           <p className="text-xl font-semibold text-gray-800">
-            &quot;Innovative solutions currently in development.&quot;
+            "Innovative solutions currently in development."
           </p>
           <ul className="mt-4 text-gray-700 leading-relaxed list-disc pl-6">
             <li>
@@ -30,17 +37,7 @@ const PortfolioCardSection = () => {
                 Visit the website
               </a>
               <p className="mt-2">
-                Community Energy Connectors is a self-sustaining force in clean energy technical assistance for the entire nation, including all urban, rural, territory, and Tribal communities. We intend for it to become a vast and valuable resource for underserved communities, energy program resources, and innovative and generous connectors.
-              </p>
-              <p className="mt-2">
-                <a
-                  href="https://amerindnation.com/cec"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
-                >
-                  Join the Community Energy Connectors initiative
-                </a>
+                Community Energy Connectors is a self-sustaining force in clean energy technical assistance for the entire nation, including all urban, rural, territory, and Tribal communities.
               </p>
             </li>
             <li>
@@ -54,33 +51,25 @@ const PortfolioCardSection = () => {
               >
                 Visit the website
               </a>
-              <p className="mt-2">
-                The Energy Efficiency and Conservation Block Grant (EECBG) Program is designed to assist states, local governments, and Tribes in implementing strategies to reduce energy use, to reduce fossil fuel emissions, and to improve energy efficiency.
-              </p>
-              <p className="mt-2">
-                If you represent a Tribe or intertribal organization,{" "}
-                <a
-                  href="#"
-                  className="text-blue-600 hover:underline"
-                  onClick={() => alert("Schedule Eligibility pop-up")}
-                >
-                  contact us
-                </a>{" "}
-                to schedule an eligibility consultation.
-              </p>
             </li>
           </ul>
-        </div>
+        </motion.div>
       ),
     },
     {
       title: "Past Projects",
       gradient: "bg-gradient-to-br from-[#2F6368] to-[#264F51]", // Teal-blue gradient
       icon: "📂",
+      borderColor: "border-[#264F51]",
       details: (
-        <div className="bg-gray-50 p-6 rounded-b-lg shadow-md border-t-4 border-[#264F51]">
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          className="bg-gray-50 p-6 rounded-b-lg shadow-md border-t-4 border-[#264F51]"
+        >
           <p className="text-xl font-semibold text-gray-800">
-            &quot;A portfolio of impactful solutions.&quot;
+            "A portfolio of impactful solutions."
           </p>
           <ul className="mt-4 text-gray-700 leading-relaxed list-disc pl-6">
             <li>
@@ -94,9 +83,6 @@ const PortfolioCardSection = () => {
               >
                 Visit the website
               </a>
-              <p className="mt-2">
-                Assisted an Arizona nonprofit with a $50M grant application for urban and rural reforestation and brownfield reclamation—completing it in seven days. Also developed a long-term strategy for carbon capture and plant bioinformatics initiatives.
-              </p>
             </li>
             <li>
               <strong>Minority Professional Truckers Association (MPTA)</strong>
@@ -109,30 +95,39 @@ const PortfolioCardSection = () => {
               >
                 Visit the website
               </a>
-              <p className="mt-2">
-                Assisted MPTA in creating a business plan and website, trained dozens of people on requirements for opening truck driver training schools, and consulted with a national organization to help thousands expand their presence in rural food markets.
-              </p>
             </li>
           </ul>
-        </div>
+        </motion.div>
       ),
     },
   ];
 
   return (
     <div className="w-full bg-gray-50 pt-10 pb-10">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-6">
         {cards.map((card, index) => (
-          <div key={index} className="mb-6">
-            <div
-              className={`cursor-pointer p-6 rounded-lg shadow-md text-white flex items-center justify-between ${card.gradient}`}
+          <motion.div
+            key={index}
+            className="w-full md:w-1/2"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+          >
+            <motion.div
+              className={`cursor-pointer p-6 rounded-lg shadow-md text-white flex items-center justify-between transition duration-300 ${
+                expandedCard === null || expandedCard === index
+                  ? card.gradient
+                  : "bg-gray-400 cursor-not-allowed opacity-50"
+              }`}
               onClick={() => handleToggle(index)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <span className="text-2xl font-semibold">{card.title}</span>
               <span className="text-3xl">{card.icon}</span>
-            </div>
+            </motion.div>
             {expandedCard === index && card.details}
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

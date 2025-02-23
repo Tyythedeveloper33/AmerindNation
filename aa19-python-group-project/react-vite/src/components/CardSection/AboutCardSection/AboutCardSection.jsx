@@ -16,7 +16,7 @@ const AboutCardSection = () => {
       icon: "🌍",
       details: (
         <motion.div
-          className="bg-gray-50 p-6 rounded-b-lg shadow-md border-t-4 border-[#467F5D] w-3/4 mx-auto"
+          className="bg-gray-50 p-6 rounded-b-lg shadow-md border-t-4 border-[#467F5D] w-full lg:w-[600px] mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -51,7 +51,7 @@ const AboutCardSection = () => {
               { icon: "🌱", title: "Sustainability", desc: "Building long-term solutions that preserve resources and the environment." },
               { icon: "🚀", title: "Innovation", desc: "Encouraging new ideas and creative problem-solving." },
               { icon: "🛡️", title: "Integrity", desc: "Upholding honesty, transparency, and accountability." },
-              { icon: "🤝", title: "Collaboration", desc: "Working together to drive meaningful change." },
+              { icon: "🤝", title: "Collaboration", desc: "Working together to drive meaningful change." }
             ].map((value, index) => (
               <div key={index} className="flex items-start space-x-2">
                 <span className="text-2xl">{value.icon}</span>
@@ -70,7 +70,7 @@ const AboutCardSection = () => {
       icon: "👥",
       details: (
         <motion.div
-          className="bg-gray-50 p-6 rounded-b-lg shadow-md border-t-4 border-[#467F5D] w-3/4 mx-auto"
+          className="bg-gray-50 p-6 rounded-b-lg shadow-md border-t-4 border-[#467F5D] w-full lg:w-[600px] mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -136,22 +136,16 @@ const AboutCardSection = () => {
             {/* Animated Connector */}
             {expandedCard === index && (
               <motion.div
-                className={`h-4 ${card.gradient}`}
-                style={{
-                  clipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%)",
-                }}
-                initial={{ scaleY: 0 }}
-                animate={{ scaleY: 1 }}
-                transition={{ duration: 0.4 }}
-              />
+                className="bg-gray-50 p-6 rounded-b-lg shadow-md border-t-4 border-[#467F5D]"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+                {card.details}
+              </motion.div>
             )}
           </motion.div>
         ))}
-      </div>
-
-      {/* Expanded Content */}
-      <div className="mt-8 max-w-7xl mx-auto">
-        {expandedCard !== null && cards[expandedCard].details}
       </div>
     </div>
   );
