@@ -13,6 +13,7 @@ import ServicesCardSection from '../components/CardSection/ServicesCardSection';
 import DashboardUI from '../components/DashBoard/DashboardUI';
 import PartnersCardSection from '../components/CardSection/PartnersCardSection';
 import IdeaSubmissionSection from '../components/IdeaSubmission';
+import SageContent from '../components/SageContent';
 
 export const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
       {
         path: "dashboard",
         element: (<div className="pt-20"><DashboardUI/></div>),
+      },
+      {
+        path: "sage",
+        element: (<div className="pt-20"><PartnersHeroSection/><SageContent/></div>),
       },
     ],
   },

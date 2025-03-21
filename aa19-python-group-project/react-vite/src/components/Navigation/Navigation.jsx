@@ -55,6 +55,7 @@ const Navigation = () => {
           { text: "Partners", link: "/partners" },
           { text: "Portfolio", link: "/portfolio" },
           { text: "Services", link: "/services" },
+          { text: "Sage", link: "/sage" },
         ].map(({ text, link }, index) => (
           <NavLink
             key={index}
@@ -111,6 +112,7 @@ const Navigation = () => {
             { text: "Partners", link: "/partners" },
             { text: "Portfolio", link: "/portfolio" },
             { text: "Services", link: "/services" },
+            // { text: "Sage", link: "/sage" },
           ].map(({ text, link }, index) => (
             <NavLink
               key={index}
