@@ -167,36 +167,32 @@ const ctaFeatures = servicesData.map(section => ({
 
 const SageContent = () => {
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', lineHeight: 1.6 }}>
+    <div className="p-6 font-sans leading-relaxed">
       {/* Intro Section */}
-      <section style={{ marginBottom: '40px', textAlign: 'center' }}>
-        <h1>{introContent.title}</h1>
-        <p>{introContent.description}</p>
+      <section className="mb-10 text-center">
+        <h1 className="text-3xl font-bold mb-4">{introContent.title}</h1>
+        <p className="text-lg">{introContent.description}</p>
       </section>
 
       {/* Fractional CXO Section */}
-      <section style={{ marginBottom: '40px', background: '#eef9ff', padding: '20px', borderRadius: '8px' }}>
-        <h2>{fractionalCXO.title}</h2>
-        <p>{fractionalCXO.description}</p>
+      <section className="mb-10 bg-blue-50 p-6 rounded-lg">
+        <h2 className="text-2xl font-semibold mb-2">{fractionalCXO.title}</h2>
+        <p className="mb-2">{fractionalCXO.description}</p>
         <p>{fractionalCXO.details}</p>
       </section>
 
       {/* Services Section */}
       {servicesData.map((section) => (
-        <div key={section.category} style={{ marginBottom: '40px' }}>
-          <h2 style={{ borderBottom: '2px solid #ccc', paddingBottom: '10px' }}>{section.category}</h2>
-          <div style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '20px'
-          }}>
+        <div key={section.category} className="mb-10">
+          <h2 className="text-2xl font-semibold border-b border-gray-300 pb-2 mb-4">{section.category}</h2>
+          <div className="flex flex-wrap gap-5">
             {section.tasks.map((task, index) => (
-              <div key={index} style={{ flex: '1 1 180px', background: '#f9f9f9', padding: '15px', borderRadius: '8px' }}>
-                <h3 style={{ margin: '0 0 10px' }}>
+              <div key={index} className="flex-1 min-w-[180px] bg-gray-50 p-4 rounded-lg shadow-sm">
+                <h3 className="text-xl font-medium mb-2">
                   <span role="img" aria-label={task.title}>{task.emoji}</span> {task.title}
                 </h3>
-                <p style={{ margin: '0 0 5px' }}><strong>Description:</strong> {task.description}</p>
-                <p style={{ margin: '0' }}><strong>Benefit:</strong> {task.benefit}</p>
+                <p className="mb-1"><strong>Description:</strong> {task.description}</p>
+                <p className="text-sm"><strong>Benefit:</strong> {task.benefit}</p>
               </div>
             ))}
           </div>
@@ -204,29 +200,22 @@ const SageContent = () => {
       ))}
 
       {/* CTA Section */}
-      <section style={{ marginTop: '60px', background: '#f0f0f0', padding: '20px', borderRadius: '8px', textAlign: 'center' }}>
-        <h2>Explore Our Features</h2>
-        {ctaFeatures.map((feature, index) => (
-          <div key={index} style={{ marginBottom: '20px', textAlign: 'left', display: 'inline-block', maxWidth: '600px' }}>
-            <h3>{feature.category}</h3>
-            <ul>
-              {feature.tasks.map((taskTitle, idx) => (
-                <li key={idx}>{taskTitle}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <section className="mt-12 bg-gray-200 p-6 rounded-lg text-center">
+        <h2 className="text-2xl font-semibold mb-4">Explore Our Features</h2>
+        <div className="flex flex-wrap justify-center gap-8 mb-6">
+          {ctaFeatures.map((feature, index) => (
+            <div key={index} className="text-left max-w-md">
+              <h3 className="text-xl font-semibold mb-2">{feature.category}</h3>
+              <ul className="list-disc ml-5">
+                {feature.tasks.map((taskTitle, idx) => (
+                  <li key={idx} className="text-sm">{taskTitle}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
         <button
-          style={{
-            marginTop: '20px',
-            padding: '10px 20px',
-            fontSize: '16px',
-            backgroundColor: '#007BFF',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '5px',
-            cursor: 'pointer'
-          }}
+          className="mt-4 px-6 py-3 text-lg font-medium bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
           onClick={() => window.location.href = '/contact'}
         >
           Book a Free Consultation Today
