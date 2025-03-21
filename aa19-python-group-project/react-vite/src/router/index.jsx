@@ -14,6 +14,9 @@ import DashboardUI from '../components/DashBoard/DashboardUI';
 import PartnersCardSection from '../components/CardSection/PartnersCardSection';
 import IdeaSubmissionSection from '../components/IdeaSubmission';
 import SageContent from '../components/SageContent';
+import Privacy from '../components/Privacy';
+import Terms from '../components/Terms';
+
 
 export const router = createBrowserRouter([
   {
@@ -59,6 +62,14 @@ export const router = createBrowserRouter([
       {
         path: "sage",
         element: (<div className="pt-20"><PartnersHeroSection/><SageContent/></div>),
+      },
+      {
+        path: "privacy",
+        element: (<div className="pt-20"><Privacy/></div>),
+      },
+      {
+        path: "terms",
+        element: (<div className="pt-20"><Terms/></div>),
       },
     ],
   },
