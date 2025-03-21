@@ -9,18 +9,19 @@ import Footer from "../components/Footer";
 export default function Layout() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     dispatch(thunkAuthenticate()).then(() => setIsLoaded(true));
   }, [dispatch]);
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <ModalProvider>
         <Navigation />
-        {isLoaded && <Outlet />}
-        <Footer/>
+        <main className="flex-grow">{isLoaded && <Outlet />}</main>
+        <Footer />
         <Modal />
       </ModalProvider>
-    </>
+    </div>
   );
 }
