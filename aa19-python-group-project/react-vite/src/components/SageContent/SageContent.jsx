@@ -8,19 +8,19 @@ const servicesData = [
       {
         title: "Program Dashboard",
         emoji: "🖥️",
-        description: "Get your team into amerindnation.com to access all tasks, documents, and systems—complete with deadlines and smart automations.",
+        description: "Get your team into your own custom dashboard to access all tasks, documents, and systems—complete with deadlines and smart automations.",
         benefit: "This centralized dashboard streamlines your operations, ensuring your business stays organized and on track for growth."
       },
       {
         title: "CRM & Website",
         emoji: "🌐",
-        description: "Guide your client to https://app.pre.world to set up a sleek website, robust CRM automations, social media integrations, contracts, and payments.",
+        description: "Guide you to set up a sleek website with robust a-la-carte CRM automations, social media integrations, contracts, and payments.",
         benefit: "Establishing a professional digital presence and seamless CRM system boosts client engagement and builds trust."
       },
       {
         title: "Digitization",
         emoji: "📄",
-        description: "Assist in collecting and scanning key organizational and founder documents into Pre accounts—with the option to mail a welcome packet that includes a scanner.",
+        description: "Assist in collecting and scanning key organizational and founder documents.",
         benefit: "Digitizing your documents ensures secure, easily accessible records and streamlines your administrative processes."
       },
       {
@@ -66,7 +66,7 @@ const servicesData = [
       {
         title: "Branding",
         emoji: "🎨",
-        description: "Enhance and refine your brand identity—including your website, domain, and company emails—to reflect the spirit of Amerind Sage.",
+        description: "Enhance and refine your brand identity—including your website, domain, and company emails.",
         benefit: "A strong brand identity elevates your business, builds lasting trust, and differentiates you in a competitive market."
       },
       {
