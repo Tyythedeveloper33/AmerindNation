@@ -6,10 +6,10 @@ export default function SageHeroSection() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-black px-6">
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1 className=" text-3xl md:text-6xl font-bold">
              Sage Business Finance Renovation
           </h1>
-          <p className="text-lg md:text-xl mt-4 max-w-3xl font-semibold">
+          <p className=" md:text-xl mt-4 max-w-3xl font-semibold">
             At Amerind Sage, we tailor our services to the unique needs and size of your business.
             Whether you're a solo entrepreneur or a growing small business with a full-time team, our program is
             designed to optimize your financial operations, digital presence, and strategic planning.
