@@ -16,6 +16,7 @@ import IdeaSubmissionSection from '../components/IdeaSubmission';
 import SageContent from '../components/SageContent';
 import Privacy from '../components/Privacy';
 import Terms from '../components/Terms';
+import SageHeroSection from '../HeroSection/SageHeroSection';
 
 
 export const router = createBrowserRouter([
@@ -61,7 +62,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "sage",
-        element: (<div className="pt-20"><PartnersHeroSection/><SageContent/></div>),
+        element: (<div className="pt-20"><SageHeroSection/><SageContent/></div>),
       },
       {
         path: "privacy",
