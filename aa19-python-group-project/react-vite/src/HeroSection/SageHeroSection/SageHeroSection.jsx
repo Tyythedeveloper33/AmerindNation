@@ -7,7 +7,7 @@ export default function SageHeroSection() {
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-black px-6">
           <h1 className="text-4xl md:text-6xl font-bold">
-            Welcome to Sage Business Finance Renovation
+             Sage Business Finance Renovation
           </h1>
           <p className="text-lg md:text-xl mt-4 max-w-3xl font-semibold">
             At Amerind Sage, we tailor our services to the unique needs and size of your business.

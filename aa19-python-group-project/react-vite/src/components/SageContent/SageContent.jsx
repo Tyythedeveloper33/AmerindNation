@@ -61,7 +61,7 @@ const servicesData = [
     ]
   },
   {
-    category: "Digital",
+    category: "Digital Transformation",
     tasks: [
       {
         title: "Branding",
@@ -168,14 +168,14 @@ const ctaFeatures = servicesData.map(section => ({
 const SageContent = () => {
   return (
     <div className="p-6 font-sans leading-relaxed">
-      {/* Intro Section */}
+      {/* Intro Section
       <section className="mb-10 text-center">
         <h1 className="text-3xl font-bold mb-4">{introContent.title}</h1>
         <p className="text-lg">{introContent.description}</p>
-      </section>
+      </section> */}
 
       {/* Fractional CXO Section */}
-      <section className="mb-10 bg-blue-50 p-6 rounded-lg">
+      <section className=" text-center max-w-5xl m-auto mb-10 bg-blue-50 p-6 rounded-lg">
         <h2 className="text-2xl font-semibold mb-2">{fractionalCXO.title}</h2>
         <p className="mb-2">{fractionalCXO.description}</p>
         <p>{fractionalCXO.details}</p>
@@ -183,7 +183,7 @@ const SageContent = () => {
 
       {/* Services Section */}
       {servicesData.map((section) => (
-        <div key={section.category} className="mb-10">
+        <div key={section.category} className="mb-10 max-w-7xl m-auto">
           <h2 className="text-2xl font-semibold border-b border-gray-300 pb-2 mb-4">{section.category}</h2>
           <div className="flex flex-wrap gap-5">
             {section.tasks.map((task, index) => (
@@ -191,8 +191,8 @@ const SageContent = () => {
                 <h3 className="text-xl font-medium mb-2">
                   <span role="img" aria-label={task.title}>{task.emoji}</span> {task.title}
                 </h3>
-                <p className="mb-1"><strong>Description:</strong> {task.description}</p>
-                <p className="text-sm"><strong>Benefit:</strong> {task.benefit}</p>
+                <p className="mb-1 text-sm"><strong>What We Do:</strong> {task.description}</p>
+                <p className="text-sm"><strong>How We Help:</strong> {task.benefit}</p>
               </div>
             ))}
           </div>
@@ -200,7 +200,7 @@ const SageContent = () => {
       ))}
 
       {/* CTA Section */}
-      <section className="mt-12 bg-gray-200 p-6 rounded-lg text-center">
+      <section className=" max-w-5xl m-auto mt-12 bg-gray-200 p-6 rounded-lg text-center">
         <h2 className="text-2xl font-semibold mb-4">Explore Our Features</h2>
         <div className="flex flex-wrap justify-center gap-8 mb-6">
           {ctaFeatures.map((feature, index) => (
@@ -218,7 +218,7 @@ const SageContent = () => {
           className="mt-4 px-6 py-3 text-lg font-medium bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
           onClick={() => window.location.href = '/contact'}
         >
-          Book a Free Consultation Today
+          Start With Sage Today
         </button>
       </section>
     </div>
