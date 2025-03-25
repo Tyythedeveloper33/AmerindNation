@@ -7,112 +7,142 @@ const servicesData = [
       {
         title: "Program Dashboard",
         emoji: "🖥️",
-        description: "Get your team into your own custom dashboard to access all tasks, documents, and systems—complete with deadlines and smart automations.",
+        description: "Get your team into amerindnation.com to access all tasks, documents, and systems—complete with deadlines and smart automations.",
         benefit: "This centralized dashboard streamlines your operations, ensuring your business stays organized and on track for growth."
       },
       {
-        title: "Data Backup",
-        emoji: "💾",
-        description: "Secure your critical business data with automated backups, so you never have to worry about losing important information.",
-        benefit: "Data protection helps prevent business downtime due to data loss, ensuring you have continuous access to essential files."
+        title: "CRM & Website",
+        emoji: "🌐",
+        description: "Guide your client to https://app.pre.world to set up a sleek website, robust CRM automations, social media integrations, contracts, and payments.",
+        benefit: "Establishing a professional digital presence and seamless CRM system boosts client engagement and builds trust."
       },
       {
-        title: "Disaster Recovery Plan",
-        emoji: "⚡",
-        description: "Prepare for the unexpected with a disaster recovery plan that outlines the steps to take in case of an emergency, from system outages to cyberattacks.",
-        benefit: "This plan minimizes operational interruptions and helps you quickly recover from any disruption, protecting your business reputation."
+        title: "Digitization",
+        emoji: "📄",
+        description: "Assist in collecting and scanning key organizational and founder documents into Pre accounts—with the option to mail a welcome packet that includes a scanner.",
+        benefit: "Digitizing your documents ensures secure, easily accessible records and streamlines your administrative processes."
+      },
+      {
+        title: "Enhancement",
+        emoji: "✨",
+        description: "Review personal and organizational collections using AI insights and provide a comprehensive organizational documents checklist.",
+        benefit: "Enhancing your documentation process uncovers growth opportunities and empowers your team with actionable insights."
       }
     ]
   },
   {
-    category: "Optimization",
+    category: "Accounting",
     tasks: [
       {
-        title: "System Performance Enhancement",
-        emoji: "🚀",
-        description: "Optimize your existing systems to improve performance, reduce downtime, and increase efficiency.",
-        benefit: "Enhancing system performance improves employee productivity and reduces delays, leading to a more streamlined operation."
-      },
-      {
-        title: "Automation Setup",
-        emoji: "🤖",
-        description: "Implement automation to reduce manual tasks, increase speed, and reduce the chance of human error.",
-        benefit: "Automation simplifies workflows, freeing up time for strategic tasks and improving the overall quality of work."
-      },
-      {
-        title: "Cloud Integration",
-        emoji: "☁️",
-        description: "Move your operations to the cloud for better accessibility, flexibility, and scalability.",
-        benefit: "Cloud integration enables real-time collaboration, improves storage options, and supports business growth without significant infrastructure investment."
-      }
-    ]
-  },
-  {
-    category: "Security",
-    tasks: [
-      {
-        title: "Advanced Firewall Protection",
-        emoji: "🛡️",
-        description: "Install and configure advanced firewall solutions to safeguard your business against external threats and cyberattacks.",
-        benefit: "A strong firewall ensures the integrity of your systems, keeping data safe from unauthorized access and reducing the risk of breaches."
-      },
-      {
-        title: "Encryption Services",
-        emoji: "🔐",
-        description: "Encrypt sensitive data both in transit and at rest to ensure your business's information is secure at all times.",
-        benefit: "Data encryption provides an extra layer of protection for critical business information, safeguarding against data theft and unauthorized access."
-      },
-      {
-        title: "Identity and Access Management",
-        emoji: "🗝️",
-        description: "Control access to your systems by implementing strict identity and access management protocols.",
-        benefit: "This system ensures that only authorized individuals can access sensitive information, reducing the chances of internal and external threats."
-      }
-    ]
-  },
-  {
-    category: "Growth",
-    tasks: [
-      {
-        title: "Lead Generation Tools",
-        emoji: "🔍",
-        description: "Use advanced tools and techniques to generate high-quality leads that convert into loyal customers.",
-        benefit: "Generating qualified leads helps you reach the right customers, increasing the chances of successful conversions and growing your business."
-      },
-      {
-        title: "Customer Relationship Management (CRM)",
-        emoji: "💼",
-        description: "Implement a CRM system to track and manage customer interactions and data throughout the customer lifecycle.",
-        benefit: "A well-managed CRM system improves customer service, enhances sales, and helps build long-lasting relationships with clients."
-      },
-      {
-        title: "Market Analysis and Reporting",
+        title: "Reporting",
         emoji: "📊",
-        description: "Utilize data analytics tools to gain insights into market trends and your competitors, helping you make informed business decisions.",
-        benefit: "Market analysis gives you the edge in identifying opportunities and threats in the market, allowing you to tailor your strategies for success."
+        description: "Provide comprehensive accounting support to ensure accurate financial tracking.",
+        benefit: "Clear reporting gives you real-time insight into your financial performance, enabling informed strategic decisions."
+      },
+      {
+        title: "Bookkeeping",
+        emoji: "📚",
+        description: "Maintain timely and precise bookkeeping to keep your financial records up-to-date.",
+        benefit: "Reliable bookkeeping lays the foundation for fiscal responsibility and long-term financial health."
+      },
+      {
+        title: "Tax Strategy",
+        emoji: "🧾",
+        description: "Develop tax planning strategies to optimize your fiscal position and minimize liabilities.",
+        benefit: "A solid tax strategy helps you keep more of your earnings while positioning your business for sustainable growth."
+      },
+      {
+        title: "Budget Planning",
+        emoji: "💰",
+        description: "Assist in creating a sustainable budget and forecast future financial trends.",
+        benefit: "Effective budgeting ensures resources are allocated wisely and supports your business's strategic goals."
       }
     ]
   },
   {
-    category: "Training",
+    category: "Digital",
     tasks: [
       {
-        title: "Employee Training Programs",
-        emoji: "👩‍🏫",
-        description: "Provide comprehensive training programs for your team to ensure they are equipped with the latest skills and knowledge.",
-        benefit: "Training helps improve employee performance, boosts morale, and ensures your team can tackle new challenges effectively."
+        title: "Branding",
+        emoji: "🎨",
+        description: "Enhance and refine your brand identity—including your website, domain, and company emails—to reflect the spirit of Amerind Sage.",
+        benefit: "A strong brand identity elevates your business, builds lasting trust, and differentiates you in a competitive market."
       },
       {
-        title: "Leadership Development",
-        emoji: "🌱",
-        description: "Focus on leadership development by providing managers with the tools they need to inspire and lead their teams successfully.",
-        benefit: "Leadership development enhances decision-making, fosters a positive work culture, and prepares your team for the challenges ahead."
+        title: "Social",
+        emoji: "💬",
+        description: "Develop a dynamic social media strategy that boosts your online presence and integrates campaigns into your CRM.",
+        benefit: "An engaging social media strategy increases visibility and drives meaningful interactions with your audience."
       },
       {
-        title: "Compliance Training",
-        emoji: "📜",
-        description: "Offer training to ensure your employees are up to date with relevant industry regulations and compliance standards.",
-        benefit: "Compliance training reduces the risk of legal issues and helps ensure your business operates ethically and within the law."
+        title: "Operations",
+        emoji: "⚙️",
+        description: "Optimize your digital operations and workflows for maximum efficiency.",
+        benefit: "Streamlined operations reduce waste and enhance productivity, allowing you to focus on strategic growth."
+      },
+      {
+        title: "Dashboards",
+        emoji: "📈",
+        description: "Create real-time operational dashboards that provide key business insights.",
+        benefit: "Instant access to performance data empowers you to make agile, data-driven decisions."
+      }
+    ]
+  },
+  {
+    category: "Capacity",
+    tasks: [
+      {
+        title: "Business Plan",
+        emoji: "📝",
+        description: "Develop a comprehensive business plan that outlines your strategy and growth trajectory.",
+        benefit: "A well-crafted business plan acts as a roadmap for success, aligning your team and attracting investment."
+      },
+      {
+        title: "Product Roadmap",
+        emoji: "🚀",
+        description: "Create a clear product roadmap that guides future development and innovation.",
+        benefit: "This service ensures your product development aligns with market demands and your long-term vision."
+      },
+      {
+        title: "Strategic Partners",
+        emoji: "🤝",
+        description: "Identify and engage with strategic partners to expand your business capacity.",
+        benefit: "Building the right partnerships opens up new market opportunities and accelerates growth."
+      },
+      {
+        title: "Exit Strategy",
+        emoji: "🔚",
+        description: "Plan an exit strategy that maximizes long‑term value for your business.",
+        benefit: "An effective exit strategy secures your legacy and ensures you achieve the best possible outcome when transitioning."
+      }
+    ]
+  },
+  {
+    category: "Fundability",
+    tasks: [
+      {
+        title: "Personal Credit",
+        emoji: "👤",
+        description: "Improve the personal credit profile of business owners to unlock better financing opportunities.",
+        benefit: "Strengthening personal credit can enhance your financing options, helping you access capital at more favorable terms."
+      },
+      {
+        title: "Business Credit",
+        emoji: "🏢",
+        description: "Enhance your business credit profile to improve fundability and attract investment.",
+        benefit: "A robust business credit score increases your chances of securing loans and growing your company."
+      },
+      {
+        title: "Grants & Contracts",
+        emoji: "📑",
+        description: "Identify and secure grants and contracts to support your business growth initiatives.",
+        benefit: "Leveraging external funding sources provides a critical boost to your growth without diluting equity."
+      },
+      {
+        title: "Equity Investing",
+        emoji: "💹",
+        description: "Provide expert guidance on equity investing to fuel your expansion plans.",
+        benefit: "Strategic equity investments can inject capital into your business, enabling scalable growth and innovation."
       }
     ]
   }
