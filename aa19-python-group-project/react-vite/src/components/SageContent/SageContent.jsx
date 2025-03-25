@@ -130,6 +130,10 @@ const SageContent = () => {
     setShowIframe(true);
   };
 
+  const handleCloseIframe = () => {
+    setShowIframe(false);
+  };
+
   return (
     <div className="p-6 font-sans leading-relaxed">
       {/* Services Section */}
@@ -151,52 +155,61 @@ const SageContent = () => {
       ))}
 
       {/* CTA Section */}
-      <section className="max-w-5xl m-auto mt-12 bg-gray-200 p-6 rounded-lg text-center">
-        <h2 className="text-2xl font-semibold mb-4">Explore Our Features</h2>
-        <div className="flex flex-wrap justify-center gap-8 mb-6">
-          {ctaFeatures.map((feature, index) => (
-            <div key={index} className="text-left max-w-md">
-              <h3 className="text-xl font-semibold mb-2">{feature.category}</h3>
-              <ul className="list-disc ml-5">
-                {feature.tasks.map((taskTitle, idx) => (
-                  <li key={idx} className="text-sm">{taskTitle}</li>
-                ))}
-              </ul>
-            </div>
+      <section className="max-w-7xl m-auto mt-12 p-8 bg-gray-50 rounded-lg shadow-lg text-center">
+  <h2 className="text-4xl font-extrabold text-gray-800 mb-8">Explore Our Features</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+    {ctaFeatures.map((feature, index) => (
+      <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all ease-in-out duration-300">
+        <h3 className="text-2xl font-semibold text-blue-600 mb-4">{feature.category}</h3>
+        <ul className="list-disc ml-5 text-left text-lg text-gray-700 space-y-3">
+          {feature.tasks.map((taskTitle, idx) => (
+            <li key={idx} className="transition-colors hover:text-blue-600">{taskTitle}</li>
           ))}
-        </div>
-        <button
-          className="mt-4 px-6 py-3 text-lg font-medium bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-          onClick={handleButtonClick}
-        >
-          Start With Sage Today
-        </button>
-      </section>
+        </ul>
+      </div>
+    ))}
+  </div>
+  <button
+    className="mt-8 px-10 py-5 text-xl font-semibold bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-200 ease-in-out"
+    onClick={handleButtonClick}
+  >
+    Start With Sage Today
+  </button>
+</section>
+
+
 
       {/* Embedded iframe Section */}
       {showIframe && (
-  <div className="mt-12 relative" style={{ marginBottom: '150px' }}>
-    <iframe
-      src="https://api.leadconnectorhq.com/widget/booking/6xTXDgD1BhDbkg9vUuzf"
-      style={{
-        position: 'absolute',
-        bottom: '0',
-        width: '100%',
-        height: '900px', // Set a height for the iframe to make it visible
-        border: 'none',
-        zIndex: 9999, // High z-index to overlay above everything
-        overflow: 'hidden',
-      }}
-      scrolling="no"
-      id="6xTXDgD1BhDbkg9vUuzf_1742886240804"
-    ></iframe>
-    <br />
-    <script
-      src="https://link.msgsndr.com/js/form_embed.js"
-      type="text/javascript"
-    ></script>
-  </div>
-)}
+        <div className="mt-12 relative" style={{ marginBottom: '150px' }}>
+          <button
+            onClick={handleCloseIframe}
+            className="absolute top-0 right-0 p-4 text-white text-xl bg-red-600 rounded-full"
+            aria-label="Close iframe"
+          >
+            ×
+          </button>
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/booking/6xTXDgD1BhDbkg9vUuzf"
+            style={{
+              position: 'absolute',
+              bottom: '0',
+              width: '100%',
+              height: '900px',
+              border: 'none',
+              zIndex: 9999,
+              overflow: 'hidden',
+            }}
+            scrolling="no"
+            id="6xTXDgD1BhDbkg9vUuzf_1742886240804"
+          ></iframe>
+          <br />
+          <script
+            src="https://link.msgsndr.com/js/form_embed.js"
+            type="text/javascript"
+          ></script>
+        </div>
+      )}
     </div>
   );
 };
